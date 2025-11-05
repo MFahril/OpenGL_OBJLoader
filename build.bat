@@ -46,12 +46,41 @@ if %ERRORLEVEL% EQU 0 (
     echo Compilation failed!
     echo ===================================
     echo Please check:
-    echo 1. MinGW/GCC is installed
-    echo 2. FreeGLUT is installed
+    echo 1. MinGW/GCC is installed and in PATH
+    echo 2. FreeGLUT is installed properly
     echo 3. All files are in correct folders:
     echo    Core\   - Source files
     echo    Models\ - OBJ files
     echo    md\     - Documentation
     echo.
+    echo FreeGLUT Installation Guide:
+    echo 1. Download FreeGLUT from: https://www.transmissionzero.co.uk/software/freeglut-devel/
+    echo 2. Extract and copy:
+    echo    - freeglut.dll to C:\Windows\System32 (64-bit) or C:\Windows\SysWOW64 (32-bit)
+    echo    - OR copy freeglut.dll to this project folder
+    echo    - include files to MinGW\include\GL\
+    echo    - lib files to MinGW\lib\
+    echo.
     pause
 )
+
+echo.
+echo ===================================
+echo IMPORTANT: Runtime DLL Required
+echo ===================================
+echo If you get "libfreeglut.dll not found" error when running:
+echo.
+echo Solution 1 (Recommended):
+echo   Copy freeglut.dll to the same folder as ObjViewer.exe
+echo.
+echo Solution 2:
+echo   Copy freeglut.dll to C:\Windows\System32 (for 64-bit)
+echo   or C:\Windows\SysWOW64 (for 32-bit systems)
+echo.
+echo Solution 3:
+echo   Add MinGW bin folder to Windows PATH environment variable
+echo.
+echo Download FreeGLUT DLL from:
+echo   https://www.transmissionzero.co.uk/software/freeglut-devel/
+echo ===================================
+echo.
