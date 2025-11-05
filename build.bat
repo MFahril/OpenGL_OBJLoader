@@ -12,7 +12,7 @@ if exist "C:\MinGW\bin" set PATH=C:\MinGW\bin;%PATH%
 if exist "C:\msys64\mingw64\bin" set PATH=C:\msys64\mingw64\bin;%PATH%
 
 echo Compiling with static libraries (no DLL dependencies)...
-g++ -o ObjViewer.exe Core\main.cpp Core\ObjLoader.cpp Core\AnimationLoader.cpp -ICore -DFREEGLUT_STATIC -lopengl32 -lglu32 -lfreeglut_static -lwinmm -lgdi32 -static-libgcc -static-libstdc++ -static
+g++ -o ObjViewer.exe Core\main.cpp Core\ObjLoader.cpp Core\AnimationLoader.cpp -ICore -DFREEGLUT_STATIC -lfreeglut_static -lopengl32 -lglu32 -lwinmm -lgdi32 -static-libgcc -static-libstdc++ -static
 
 if %ERRORLEVEL% EQU 0 (
     echo.
