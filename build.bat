@@ -7,7 +7,7 @@ echo.
 cd /d "%~dp0"
 
 echo Compiling from organized structure...
-g++ -o ObjViewer.exe Core\main.cpp Core\ObjLoader.cpp -ICore -lopengl32 -lglu32 -lfreeglut -static-libgcc -static-libstdc++
+g++ -o ObjViewer.exe Core\main.cpp Core\ObjLoader.cpp -ICore -lopengl32 -lglu32 -lfreeglut -static-libgcc -static-libstdc++ -static
 
 if %ERRORLEVEL% EQU 0 (
     echo.
@@ -65,22 +65,24 @@ if %ERRORLEVEL% EQU 0 (
 )
 
 echo.
-echo ===================================
-echo IMPORTANT: Runtime DLL Required
-echo ===================================
-echo If you get "libfreeglut.dll not found" error when running:
+echo ========================================================================
+echo IMPORTANT: Runtime DLL Required - PLEASE READ!
+echo ========================================================================
 echo.
-echo Solution 1 (Recommended):
-echo   Copy freeglut.dll to the same folder as ObjViewer.exe
+echo If you get "freeglut.dll was not found" error when running ObjViewer.exe:
 echo.
-echo Solution 2:
-echo   Copy freeglut.dll to C:\Windows\System32 (for 64-bit)
-echo   or C:\Windows\SysWOW64 (for 32-bit systems)
+echo ** QUICK FIX (Recommended) **
+echo   1. Download FreeGLUT from: 
+echo      https://www.transmissionzero.co.uk/software/freeglut-devel/
+echo   2. Extract the ZIP file
+echo   3. Copy freeglut.dll from bin\x64\ (64-bit) or bin\ (32-bit)
+echo   4. Paste it in the SAME FOLDER as ObjViewer.exe
+echo   5. Done! Run ObjViewer.exe again
 echo.
-echo Solution 3:
-echo   Add MinGW bin folder to Windows PATH environment variable
+echo Alternative Solutions:
+echo   - Copy freeglut.dll to C:\Windows\System32 (64-bit Windows)
+echo   - Copy freeglut.dll to C:\Windows\SysWOW64 (32-bit Windows)
 echo.
-echo Download FreeGLUT DLL from:
-echo   https://www.transmissionzero.co.uk/software/freeglut-devel/
-echo ===================================
+echo For detailed instructions, see: FIX_FREEGLUT_DLL_ERROR.md
+echo ========================================================================
 echo.
