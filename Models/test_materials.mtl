@@ -1,0 +1,50 @@
+# Material file for test_cube.obj
+# This demonstrates material properties
+
+newmtl Red
+Ka 0.8 0.0 0.0
+Kd 0.8 0.0 0.0
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+illum 2
+
+newmtl Green
+Ka 0.0 0.8 0.0
+Kd 0.0 0.8 0.0
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+illum 2
+
+newmtl Blue
+Ka 0.0 0.0 0.8
+Kd 0.0 0.0 0.8
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+illum 2
+
+newmtl Yellow
+Ka 0.8 0.8 0.0
+Kd 0.8 0.8 0.0
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+illum 2
+
+newmtl Cyan
+Ka 0.0 0.8 0.8
+Kd 0.0 0.8 0.8
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+illum 2
+
+newmtl Magenta
+Ka 0.8 0.0 0.8
+Kd 0.8 0.0 0.8
+Ks 0.5 0.5 0.5
+Ns 50.0
+d 1.0
+illum 2
